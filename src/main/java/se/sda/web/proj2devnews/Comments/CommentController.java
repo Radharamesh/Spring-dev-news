@@ -17,8 +17,7 @@ public class CommentController {
     public List<Comment> getAll(@RequestParam(required = false) Long articleId) {
         if (articleId == null) {
             return CommentService.getAll();
-        }
-        else {
+        } else {
             return CommentService.getAllByArticleId(articleId);
         }
 

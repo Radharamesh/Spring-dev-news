@@ -19,11 +19,11 @@ public class ArticleService {
     }
 
     public Optional<Article> getById(Long id) {
-           return repo.findById(id);
+        return repo.findById(id);
     }
 
     public Article create(Article newArticle) {
-       return repo.save(newArticle);
+        return repo.save(newArticle);
     }
 
     public Article update(Article updatedArticle) {

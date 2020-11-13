@@ -33,6 +33,6 @@ public class CommentService {
     }
 
     public List<Comment> getAllByArticleId(Long articleId) {
-       return repo.findAllByArticleId(articleId);
+        return repo.findAllByArticleId(articleId);
     }
 }

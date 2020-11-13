@@ -13,15 +13,14 @@ public class ArticleController {
     @Autowired
     private ArticleService articleService;
 
-     @GetMapping("")
-    public List<Article> getAll(@RequestParam(required = false) Long topicId){
-         if(topicId == null){
-             return articleService.getAll();
-         }
-         else {
-             return articleService.getAllByTopicId(topicId);
-         }
-     }
+    @GetMapping("")
+    public List<Article> getAll(@RequestParam(required = false) Long topicId) {
+        if (topicId == null) {
+            return articleService.getAll();
+        } else {
+            return articleService.getAllByTopicId(topicId);
+        }
+    }
 
 
     //Get a specific task by its id

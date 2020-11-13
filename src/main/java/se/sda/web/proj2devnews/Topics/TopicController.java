@@ -14,12 +14,11 @@ public class TopicController {
     private TopicService topicService;
 
     @GetMapping("")
-    public List<Topic> getAll(@RequestParam(required = false) Long articleId){
+    public List<Topic> getAll(@RequestParam(required = false) Long articleId) {
 
-        if(articleId == null) {
-        return topicService.getAll();
-        }
-        else {
+        if (articleId == null) {
+            return topicService.getAll();
+        } else {
             return topicService.getAllByArticleId(articleId);
         }
     }
